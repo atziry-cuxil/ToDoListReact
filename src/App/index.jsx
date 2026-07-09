@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div>
-      <div>To Do List</div>
+      <h3>To Do List</h3>
       <TodoCounter completed={completedTodos} total={totalTodos} />
       <TodoSearch
         searchValue={searchValue}

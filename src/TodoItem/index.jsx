@@ -1,6 +1,5 @@
 import { CompleteIcon } from '../CompleteIcon'
 import { DeleteIcon } from '../DeleteIcon'
-
 import './TodoItem.css'
 
 function TodoItem(props) {
@@ -10,14 +9,9 @@ function TodoItem(props) {
         completed={props.completed}
         onComplete={props.onComplete}
       />
-      {/* <span 
-      className={`${props.completed ? 'verde' : 'amarillo' }`}
-      onClick={props.onComplete}
-      >✓</span> */}
+
       <p className={`parrafo ${props.completed ? 'completado' : ''}`}>{props.text}</p>
-      {/* <div
-      onClick={props.onDelete}
-      >❌</div> */}
+
       <DeleteIcon
         onDelete={props.onDelete}
       />
@@ -26,6 +20,3 @@ function TodoItem(props) {
 }
 
 export { TodoItem }
-
-
-//cuando los haya elementos

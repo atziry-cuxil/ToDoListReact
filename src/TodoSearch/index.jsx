@@ -1,4 +1,4 @@
-import React from 'react';//Inportar react aunque muchas veces si lo interpreta
+import React from 'react';
 import './TodoSearch.css';
 
 function TodoSearch({ searchValue, setSearchValue }) {

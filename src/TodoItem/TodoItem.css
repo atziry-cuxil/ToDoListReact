@@ -6,15 +6,6 @@ span {
     font-weight: 500;
 }
 
-.verde {
-    color: green;
-}
-
-.amarillo {
-    color: yellow;
-
-}
-
 li {
     width: auto;
     height: auto;
@@ -44,13 +35,11 @@ div {
 .check {
     width: 2rem;
     height: 2rem;
-    /* background-color: white; */
 }
 
 .delete {
     width: 2rem;
     height: 2rem;
-    /* background-color: red; */
     border-radius: 0.1rem;
 }
 

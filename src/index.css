@@ -1,4 +1,14 @@
-:root {
+body {
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  background-color: #2e303a;
+}
+
+
+
+
+
+
+/* :root {
   --text: #6b6375;
   --text-h: #08060d;
   --bg: #fff;
@@ -28,9 +38,9 @@
   @media (max-width: 1024px) {
     font-size: 16px;
   }
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
     --text-h: #f3f4f6;
@@ -93,23 +103,4 @@ h2 {
   @media (max-width: 1024px) {
     font-size: 20px;
   }
-}
-
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-}
+} */
