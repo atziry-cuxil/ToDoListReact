@@ -1,0 +1,73 @@
+span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.verde {
+    color: green;
+}
+
+.amarillo {
+    color: yellow;
+
+}
+
+li {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.completado {
+    text-decoration: line-through;
+    text-decoration-color: gold;
+}
+
+.parrafo {
+    width: 20rem;
+    height: 5rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+div {
+    text-align: center;
+}
+
+.check {
+    width: 2rem;
+    height: 2rem;
+    /* background-color: white; */
+}
+
+.delete {
+    width: 2rem;
+    height: 2rem;
+    /* background-color: red; */
+    border-radius: 0.1rem;
+}
+
+.iconoDelete {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.iconoCheck {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.iconoDelete:hover {
+    fill: rgb(85, 7, 7);
+}
+
+.iconoCheck:hover {
+    fill: rgba(25, 207, 25, 0.342);
+}

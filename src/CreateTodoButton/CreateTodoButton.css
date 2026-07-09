@@ -1,0 +1,11 @@
+button {
+    font-size: 1rem;
+    border: 0.1rem solid antiquewhite;
+    border-radius: 0.4rem ;
+    color: black;
+    background-color: antiquewhite;
+    width: 5rem;
+    height: auto;
+    float: right;
+    
+}
