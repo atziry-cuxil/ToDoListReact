@@ -1,0 +1,52 @@
+import React from 'react';
+import { useLocalStorage } from './useLocalStorage';
+
+const TodoContext = React.createContext()
+
+function TodoProvider({children}) {
+    const { item: todos, saveItem: saveTodos, loading, error } = useLocalStorage('ToDo-v2', [])
+    const [searchValue, setSearchValue] = React.useState('');
+    const completedTodos = todos.filter(todo => todo.completed).length;
+    const totalTodos = todos.length
+
+    const searchedTodos = todos.filter(todo => {
+        return todo.text.toLowerCase().includes(searchValue.toLowerCase())
+    })
+
+    const completeTodo = (text) => {
+        const newTodos = [...todos];
+        const todoIndex = newTodos.findIndex(todo => todo.text == text)
+        newTodos[todoIndex].completed = true;
+        saveTodos(newTodos);
+    }
+
+    const deleteTodo = (text) => {
+        const newTodos = [...todos];
+        const todoIndex = newTodos.findIndex(todo => todo.text == text)
+        newTodos.splice(todoIndex, 1)
+        saveTodos(newTodos);
+    }
+    return (
+        <TodoContext.Provider value={{
+            completedTodos,
+            totalTodos,
+            searchValue,
+            setSearchValue,
+            searchedTodos,
+            completeTodo,
+            deleteTodo,
+            loading,
+            error}} >
+            {children}
+        </TodoContext.Provider >
+
+    )
+    //< TodoContext.Consumer ></TodoContext.Consumer >
+
+}
+
+{/* <TodoContext.Provider></TodoContext.Provider>
+<TodoContext.Consumer></TodoContext.Consumer> */}
+//puente entre el context y cualquien componente
+
+export { TodoContext, TodoProvider }

@@ -1,0 +1,48 @@
+.LoadingTodo-container {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.LoadingTodo-text {
+    width: 20rem;
+    height: 5rem;
+    border-radius: .5rem;
+}
+
+.LoadingTodo-completeIcon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: .3rem;
+}
+
+.LoadingTodo-deleteIcon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 3rem;
+}
+
+.LoadingTodo-text,
+.LoadingTodo-completeIcon,
+.LoadingTodo-deleteIcon {
+    background: linear-gradient(
+        90deg,
+        #837a7a 25%,
+        #554545 50%,
+        #0b0b0b 75%
+    );
+    background-size: 300% 100%;
+    animation: skeletonLoading 1.5s infinite linear;
+}
+
+@keyframes skeletonLoading {
+    from {
+        background-position: 100% 0;
+    }
+    to {
+        background-position: -100% 0;
+    }
+}
