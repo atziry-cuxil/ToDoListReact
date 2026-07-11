@@ -1,0 +1,179 @@
+.modal-overlay{
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(4px);
+
+    z-index:100;
+}
+
+.modal{
+
+    position:relative;
+
+    width:420px;
+
+    background:#24242d;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.45);
+
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+
+    animation:showModal .25s ease;
+}
+
+@keyframes showModal{
+
+    from{
+        transform:translateY(-20px) scale(.95);
+        opacity:0;
+    }
+
+    to{
+        transform:translateY(0) scale(1);
+        opacity:1;
+    }
+
+}
+
+.close-btn{
+
+    position:absolute;
+    right:18px;
+    top:16px;
+
+    border:none;
+    background:none;
+
+    color:#999;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.close-btn:hover{
+
+    color:#ff6b6b;
+    transform:rotate(90deg);
+
+}
+
+.modal h2{
+
+    color:#FFE8CC;
+
+    text-align:center;
+
+    font-size:30px;
+}
+
+.modal p{
+
+    text-align:center;
+
+    color:#9f9f9f;
+
+    /* margin-top:-10px; */
+
+    font-size:15px;
+}
+
+.modal input{
+
+    width:100%;
+
+    /* padding:15px; */
+
+    background:#18181f;
+
+    border:2px solid transparent;
+
+    color:white;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:16px;
+
+    transition:.25s;
+}
+
+.modal input::placeholder{
+
+    color:#757575;
+
+}
+
+.modal input:focus{
+
+    border-color:#FFD8A8;
+
+}
+
+.modal-actions{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:15px;
+}
+
+.btn{
+
+    padding:10px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.cancel{
+
+    background:#383845;
+
+    color:#d5d5d5;
+}
+
+.cancel:hover{
+
+    background:#4b4b5d;
+}
+
+.save{
+
+    background:#FFE8CC;
+
+    color:#222;
+
+    font-weight:bold;
+}
+
+.save:hover{
+
+    background:#ffd8a8;
+
+    transform:translateY(-2px);
+}

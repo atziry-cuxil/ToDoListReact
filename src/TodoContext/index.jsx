@@ -3,9 +3,10 @@ import { useLocalStorage } from './useLocalStorage';
 
 const TodoContext = React.createContext()
 
-function TodoProvider({children}) {
+function TodoProvider({ children }) {
     const { item: todos, saveItem: saveTodos, loading, error } = useLocalStorage('ToDo-v2', [])
     const [searchValue, setSearchValue] = React.useState('');
+    const [openModal, setOpenModal] = React.useState(false);
     const completedTodos = todos.filter(todo => todo.completed).length;
     const totalTodos = todos.length
 
@@ -13,6 +14,11 @@ function TodoProvider({children}) {
         return todo.text.toLowerCase().includes(searchValue.toLowerCase())
     })
 
+    const addTodo = (text) => {
+        const newTodos = [...todos];
+        newTodos.push({text,completed: false});
+        saveTodos(newTodos);
+    }
     const completeTodo = (text) => {
         const newTodos = [...todos];
         const todoIndex = newTodos.findIndex(todo => todo.text == text)
@@ -36,17 +42,15 @@ function TodoProvider({children}) {
             completeTodo,
             deleteTodo,
             loading,
-            error}} >
+            error,
+            openModal,
+            setOpenModal,
+            addTodo
+        }} >
             {children}
         </TodoContext.Provider >
 
     )
-    //< TodoContext.Consumer ></TodoContext.Consumer >
-
 }
-
-{/* <TodoContext.Provider></TodoContext.Provider>
-<TodoContext.Consumer></TodoContext.Consumer> */}
-//puente entre el context y cualquien componente
 
 export { TodoContext, TodoProvider }

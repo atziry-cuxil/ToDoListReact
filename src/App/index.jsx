@@ -1,5 +1,5 @@
 import React from 'react'
-//import { useLocalStorage } from '../TodoContext/index.jsx/useLocalStorage.jsx'
+//import { useLocalStorage } from '../TodoContext'
 import { AppUI } from './AppUI.jsx'
 import './app.css'
 import { TodoProvider } from '../TodoContext/index.jsx'
