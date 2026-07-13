@@ -9,7 +9,7 @@ import { TodoError } from '../TodoError'
 import { EmptyTodos } from '../EmptyTodos'
 import { Modal } from '../Modal'
 import { TodoContext } from '../TodoContext'
-import {TodoForm} from '../TodoForm'
+import { TodoForm } from '../TodoForm'
 import React from 'react';
 
 function AppUI() {
@@ -54,7 +54,7 @@ function AppUI() {
             <CreateTodoButton />
 
             {openModal && <Modal>
-                <TodoForm/>
+                <TodoForm />
             </Modal>}
         </div>
     )

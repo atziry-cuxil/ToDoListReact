@@ -1,16 +1,36 @@
-# React + Vite
+# 📝 ToDo List - React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada con **React** que permite gestionar una lista de tareas de forma sencilla e intuitiva.
 
-Currently, two official plugins are available:
+## 📸 Vista previa
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+> https://atziry-cuxil.github.io/ToDoListReact/
 
-## React Compiler
+![Vista previa](./public/todo.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Características
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ Agregar nuevas tareas.
+- ✔️ Marcar tareas como completadas.
+- ❌ Eliminar tareas.
+- 📊 Contador dinámico de tareas completadas.
+- 🎨 Interfaz moderna con tema oscuro.
+- ⚡ Actualización de la interfaz en tiempo real mediante React.
+
+---
+
+## 📖 Uso
+
+1. Escribe una nueva tarea en el campo de texto.
+2. Presiona el botón **Agregar**.
+3. Marca una tarea como completada haciendo clic en el icono ✔️.
+4. Elimina una tarea con el icono ❌.
+5. El contador superior se actualizará automáticamente mostrando el progreso.
+---
+
+## 👨‍💻 Autores
+
+Proyecto desarrollado como práctica de **React**.
+
